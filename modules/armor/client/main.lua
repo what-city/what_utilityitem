@@ -2,7 +2,7 @@ local isArmorInProgress = false
 
 lib.callback.register('utilityitem:use:armor', function(itemName)
     if isArmorInProgress then return false end
-    if LocalPlayer.state.isDead then return end
+    if LocalPlayer.state.isDead then return false end
 
     local ped = PlayerPedId()
     if IsPedInAnyVehicle(ped, false) then return false end
