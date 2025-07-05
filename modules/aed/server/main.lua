@@ -6,6 +6,8 @@ end)
 
 for itemName, itemData in pairs(CONFIG_AED) do
     ESX.RegisterUsableItem(itemName, function(source)
+        if not CheckUsableJob(source, itemData?.usableJobs) then return end
+        
         if itemData.area then
             TriggerClientEvent('utilityitem:use:aed:area', source, itemName)
         else

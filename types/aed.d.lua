@@ -6,4 +6,5 @@
 --- @field health integer
 --- @field remove boolean
 --- @field area? number
---- @field progress? What.Configuartion.Progress
+--- @field progress? What.Configuration.Progress
+--- @field usableJobs? What.Configuration.UsableJob

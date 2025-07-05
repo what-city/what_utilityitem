@@ -5,3 +5,4 @@
 --- @field duration integer
 --- @field armor integer
 --- @field remove boolean
+--- @field usableJobs? What.Configuration.UsableJob

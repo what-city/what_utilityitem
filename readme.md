@@ -21,6 +21,19 @@ CONFIG_AED = {
         area      = 10.0,   -- Set this for area revive
         progress  = {       -- [Optional]
             label = 'Revive in progress'
+        },
+        usableJobs = {      -- [Optional]
+            all    = false,
+            list   = {
+                ambulance = {
+                    all   = false,
+                    [0]   = true,
+                    [1]   = true
+                },
+                police    = {
+                    all   = true
+                }
+            }
         }
     }
 }
@@ -32,11 +45,24 @@ Painkiller
 ```lua
 CONFIG_PAINKILLER = {
     ['itemName'] = {
-        duration = 12000, -- Milliseconds 
-        health   = 40,    -- Add Ped health after use
-        remove   = true,  -- Remove item after use | true | false
-        prop     = {      -- [Optional]
+        duration = 12000,   -- Milliseconds 
+        health   = 40,      -- Add Ped health after use
+        remove   = true,    -- Remove item after use | true | false
+        prop     = {        -- [Optional]
             name = 'prop_ld_health_pack'
+        },
+        usableJobs = {      -- [Optional]
+            all    = false,
+            list   = {
+                ambulance = {
+                    all   = false,
+                    [0]   = true,
+                    [1]   = true
+                },
+                police    = {
+                    all   = true
+                }
+            }
         }
     }
 }
@@ -47,9 +73,23 @@ Armor
 ```lua
 CONFIG_ARMOR = {
     ['itemName'] = {
-        duration = 12000, -- Milliseconds 
-        armor    = 40,    -- Add Ped armor after use
-        remove   = true,  -- Remove item after use | true | false
+        duration = 12000,   -- Milliseconds 
+        armor    = 40,      -- Add Ped armor after use
+        remove   = true,    -- Remove item after use | true | false
+        ,
+        usableJobs = {      -- [Optional]
+            all    = false,
+            list   = {
+                ambulance = {
+                    all   = false,
+                    [0]   = true,
+                    [1]   = true
+                },
+                police    = {
+                    all   = true
+                }
+            }
+        }
     }
 }
 ```
