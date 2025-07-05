@@ -5,4 +5,5 @@
 --- @field duration integer
 --- @field health integer
 --- @field remove boolean
+--- @field area? number
 --- @field progress? What.Configuartion.Progress
