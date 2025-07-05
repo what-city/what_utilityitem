@@ -8,6 +8,6 @@ CONFIG_AED = {
         duration = 7500,
         area     = 15.0,
         health   = 180,
-        remove   = true,
+        remove   = true
     }
 }
