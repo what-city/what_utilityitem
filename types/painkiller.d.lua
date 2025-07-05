@@ -5,3 +5,4 @@
 --- @field duration integer
 --- @field health integer
 --- @field remove boolean
+--- @field prop? What.Configuration.Prop
