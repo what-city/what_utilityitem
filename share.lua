@@ -1,9 +1,9 @@
 if IsDuplicityVersion() then
     --- @param playerId integer
-    --- @param usableJobs What.Configuration.UsableJob
+    --- @param usableJobs What.Configuration.UsableJob?
     --- @return boolean
     function CheckUsableJob(playerId, usableJobs)
-        if usableJobs == nil then return true end
+        if not usableJobs then return true end
 
         if DoesPlayerExist(playerId --[[ @as string ]]) then
             local xPlayer = ESX.GetPlayerFromId(playerId)
