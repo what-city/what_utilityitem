@@ -1,14 +1,28 @@
 
 # What Utility Items
 
+Current Version : 1.1.2
+
 FiveM Utility Items
 - AED 
 - Bandage
 - Painkiller
 - ETC.
 
+## Features
+- **Painkiller**: สามารถปรับแต่ง Model Prop ได้
+- **AED (Automated External Defibrillator)**: สามารถปรับแต่งข้อความ Progress ได้
+- **AED, Armor, Painkiller**: สามารถตั้งค่าเงื่อนไขการใช้งานได้ (จะมีอาชีพและไอเทม)
+  - กำหนดอาชีพเฉพาะและสามารถเลือกเกรดที่ต้องการได้
+  - กำหนดไอเทมที่ต้องมีภายในกระเป๋าและกำหนดจำนวนขั้นต่ำได้
 
-## Usage (configuration)
+- **Painkiller**: Customizable Model Properties
+- **AED (Automated External Defibrillator)**: Customizable Progress Text
+- **AED, Armor, Painkiller**: Configurable Usage Conditions
+  - Specify exclusive professions and required grades.
+  - Define required items in the inventory and their minimum quantities.
+
+## Usage (Configuration)
 
 Aed
 
@@ -34,6 +48,9 @@ CONFIG_AED = {
                     all   = true
                 }
             }
+        },
+        usableWhenHasAnyItem = { -- [Optional]
+            ['gang_card']    = 1 -- Needed gang_card at least 1
         }
     }
 }
@@ -63,6 +80,9 @@ CONFIG_PAINKILLER = {
                     all   = true
                 }
             }
+        },
+        usableWhenHasAnyItem = { -- [Optional]
+            ['gang_card']    = 1 -- Needed gang_card at least 1
         }
     }
 }
@@ -76,7 +96,6 @@ CONFIG_ARMOR = {
         duration = 12000,   -- Milliseconds 
         armor    = 40,      -- Add Ped armor after use
         remove   = true,    -- Remove item after use | true | false
-        ,
         usableJobs = {      -- [Optional]
             all    = false, -- If true, list = {} is no need
             list   = {
@@ -89,6 +108,9 @@ CONFIG_ARMOR = {
                     all   = true
                 }
             }
+        },
+        usableWhenHasAnyItem = { -- [Optional]
+            ['gang_card']    = 1 -- Needed gang_card at least 1
         }
     }
 }
