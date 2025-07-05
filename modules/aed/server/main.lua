@@ -4,7 +4,6 @@ RegisterNetEvent('utilityitem:aed:remove',  function(itemName)
     xPlayer.removeInventoryItem(itemName, 1)
 end)
 
-
 for itemName, itemData in pairs(CONFIG_AED) do
     ESX.RegisterUsableItem(itemName, function(source)
         if itemData.area then

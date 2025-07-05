@@ -1,12 +1,18 @@
-lib.callback.register('utilityitem:use:heal', function (itemName)
+local isPainkillerInProgress = false
+
+lib.callback.register('utilityitem:use:heal', function(itemName)
+    if isPainkillerInProgress then return false end
+
     local ped = PlayerPedId()
 
     if IsPedInAnyVehicle(ped, false) then return  false end
 
     ClearPedSecondaryTask(ped)
 
-    lib.requestAnimDict('anim@heists@narcotics@funding@gang_idle')
-    TaskPlayAnim(ped, 'anim@heists@narcotics@funding@gang_idle', 'gang_chatting_idle01', 8.0, -8.0, 3000, 0, 0,  false, false, false)
+    local animLib, animName = 'anim@heists@narcotics@funding@gang_idle', 'gang_chatting_idle01'
+
+    lib.requestAnimDict(animLib)
+    TaskPlayAnim(ped, animLib, animName, 8.0, -8.0, 3000, 0, 0,  false, false, false)
 
     local objectName = 'prop_ld_health_pack'
     lib.requestModel(objectName)
@@ -17,6 +23,8 @@ lib.callback.register('utilityitem:use:heal', function (itemName)
     AttachEntityToEntity(prop, ped, boneIndex, 0.0, 0.0, 0.0, 0.0, 90.0, 0.0, true, true, false, true, 1, true)
 
     CreateThread(function()
+        isPainkillerInProgress = true
+
         local itemConfig = CONFIG_PAINKILLER[itemName]
         local duration = itemConfig?.duration or 3000
         local addHealth = itemConfig?.health or 20
@@ -30,7 +38,9 @@ lib.callback.register('utilityitem:use:heal', function (itemName)
 
         SetEntityHealth(ped, health + addHealth)
         ClearPedSecondaryTask(ped)
-        RemoveAnimDict('anim@heists@narcotics@funding@gang_idle')
+        RemoveAnimDict(animLib)
+
+        isPainkillerInProgress = false
     end)
 
     return true
