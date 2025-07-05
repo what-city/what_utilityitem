@@ -22,7 +22,7 @@ lib.callback.register('utilityitem:use:heal', function (itemName)
         local addHealth = itemConfig?.health or 20
 
         local startTime = GetGameTimer()
-        while (GetGameTimer() - startTime) <= duration do  Wait(0) end
+        while (GetGameTimer() - startTime) <= duration do Wait(0) end
 
         DeleteEntity(prop)
 

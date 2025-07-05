@@ -35,12 +35,13 @@ local function ReviveProcess(itemName)
     local lastPlayAnim = GetGameTimer()
 
     local duration = itemConfig?.duration or 10000
-    local health   = itemConfig?.health or 150
+    local health = itemConfig?.health or 150
+    local label = itemConfig?.progress?.label or 'Revive Player...'
 
     TriggerEvent('mythic_progbar:client:ProgressWithStartAndTick', {
         name = 'use_reviveitem',
         duration = duration,
-        label = 'Revive Player...',
+        label = label,
         useWhileDead = false,
         canCancel = false,
         controlDisables = {
