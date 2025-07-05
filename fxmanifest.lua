@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 name 'What Utlity Items'
-description 'What Utility Item'
+description 'What Utility Items'
 version '1.1.0'
 lua54 'yes'
 use_experimental_fxv2_oal 'yes'
