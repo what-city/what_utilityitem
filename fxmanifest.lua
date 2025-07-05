@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-name 'What Utlity Items'
+name 'What Utility Items'
 description 'What Utility Items'
 version '1.1.1'
 lua54 'yes'
