@@ -10,7 +10,7 @@ local function ShowPlayerInArea(area)
     marker:draw()
 
     for _, player in ipairs(players) do
-        local targetServerId =  GetPlayerServerId(player.id)
+        local targetServerId = GetPlayerServerId(player.id)
         local targetIsDead = Player(targetServerId).state.isDead or false
 
         if targetIsDead then
