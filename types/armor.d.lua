@@ -6,3 +6,4 @@
 --- @field armor integer
 --- @field remove boolean
 --- @field usableJobs? What.Configuration.UsableJob
+--- @field usableWhenHasAnyItem? What.Configuration.UsableWhenHasAnyItem

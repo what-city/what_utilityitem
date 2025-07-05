@@ -7,3 +7,4 @@
 --- @field remove boolean
 --- @field prop? What.Configuration.Prop
 --- @field usableJobs? What.Configuration.UsableJob
+--- @field usableWhenHasAnyItem? What.Configuration.UsableWhenHasAnyItem

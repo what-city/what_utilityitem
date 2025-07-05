@@ -35,7 +35,7 @@ lib.callback.register('utilityitem:use:heal', function(itemName)
 
         local startTime = GetGameTimer()
         while (GetGameTimer() - startTime) <= duration do Wait(0) end
-
+        
         if prop ~= nil then
             DeleteEntity(prop)
         end

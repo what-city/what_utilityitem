@@ -6,6 +6,9 @@ CONFIG_PAINKILLER = {
         health    = 40,
         prop      = {
             name  = 'prop_ld_health_pack'
+        },
+        usableWhenHasAnyItem = {
+            ['gang_card']    = 1
         }
     },
     ['painkiller_without_prop'] = {

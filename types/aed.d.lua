@@ -8,3 +8,4 @@
 --- @field area? number
 --- @field progress? What.Configuration.Progress
 --- @field usableJobs? What.Configuration.UsableJob
+--- @field usableWhenHasAnyItem? What.Configuration.UsableWhenHasAnyItem
