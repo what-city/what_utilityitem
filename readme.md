@@ -23,10 +23,10 @@ CONFIG_AED = {
             label = 'Revive in progress'
         },
         usableJobs = {      -- [Optional]
-            all    = false,
+            all    = false, -- If true, list = {} is no need
             list   = {
                 ambulance = {
-                    all   = false,
+                    all   = false, -- If true, [0] = true, [1]... is no need
                     [0]   = true,
                     [1]   = true
                 },
@@ -52,10 +52,10 @@ CONFIG_PAINKILLER = {
             name = 'prop_ld_health_pack'
         },
         usableJobs = {      -- [Optional]
-            all    = false,
+            all    = false, -- If true, list = {} is no need
             list   = {
                 ambulance = {
-                    all   = false,
+                    all   = false, -- If true, [0] = true, [1]... is no need
                     [0]   = true,
                     [1]   = true
                 },
@@ -78,10 +78,10 @@ CONFIG_ARMOR = {
         remove   = true,    -- Remove item after use | true | false
         ,
         usableJobs = {      -- [Optional]
-            all    = false,
+            all    = false, -- If true, list = {} is no need
             list   = {
                 ambulance = {
-                    all   = false,
+                    all   = false, -- If true, [0] = true, [1]... is no need
                     [0]   = true,
                     [1]   = true
                 },
