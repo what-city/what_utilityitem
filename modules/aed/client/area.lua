@@ -6,7 +6,7 @@ local function ShowPlayerInArea(area)
     local coords = GetEntityCoords(ped) - vec3(0, 0, 1)
     local players = lib.getNearbyPlayers(coords, area, false)
 
-    local marker = lib.marker.new({ type = 1, width = area * 2, height = 2.0, coords = coords, color = { r = 138, g = 234, b = 244, a = 150 }, rotation = vec3(0,0.0, 0) })
+    local marker = lib.marker.new({ type = 1, width = area * 2, height = 2.0, coords = coords, color = { r = 138, g = 234, b = 244, a = 150 }, rotation = vec3(0, 0.0, 0) })
     marker:draw()
 
     for _, player in ipairs(players) do
