@@ -1,13 +1,10 @@
-
 fx_version 'cerulean'
-
 game 'gta5'
-lua54 'yes'
 
-version '1.1.0'
-
+name 'What Utlity Items'
 description 'What Utility Item'
-
+version '1.1.0'
+lua54 'yes'
 
 shared_scripts {
 	'@ox_lib/init.lua',
@@ -21,12 +18,11 @@ client_scripts {
 }
 
 server_scripts {
-	'@mysql-async/lib/MySQL.lua',
 	'modules/**/server/*.lua',
 }
 
 dependencies {
 	'es_extended',
 	'ox_lib',
-	'mythic_progbar',
+	'mythic_progbar'
 }
