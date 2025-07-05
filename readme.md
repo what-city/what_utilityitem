@@ -38,7 +38,11 @@ CONFIG_PAINKILLER = {
     }
 }
 ```
-    
+
+## Requirements
+- [es_extended](https://docs.esx-framework.org/en)
+- [ox_lib](https://overextended.dev/ox_lib)
+- [mythic_progbar](https://github.com/TaemuruTempest/mythic_progbar)
 
 ## Support
 
