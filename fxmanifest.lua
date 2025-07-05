@@ -3,7 +3,7 @@ game 'gta5'
 
 name 'What Utility Items'
 description 'What Utility Items'
-version '1.1.1'
+version '1.1.2'
 lua54 'yes'
 use_experimental_fxv2_oal 'yes'
 
