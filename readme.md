@@ -19,7 +19,7 @@ CONFIG_AED = {
         health    = 150,    -- Add health after revive | 0 - 200
         remove    = false,  -- Remove item after use | true | false
         area      = 10.0,   -- Set this for area revive
-        progress  = { -- [Optional]
+        progress  = {       -- [Optional]
             label = 'Revive in progress'
         }
     }
@@ -35,6 +35,9 @@ CONFIG_PAINKILLER = {
         duration = 12000, -- Milliseconds 
         health   = 40,    -- Add Ped health after use
         remove   = true,  -- Remove item after use | true | false
+        prop     = {      -- [Optional]
+            name = 'prop_ld_health_pack'
+        }
     }
 }
 ```
