@@ -2,6 +2,7 @@ local isPainkillerInProgress = false
 
 lib.callback.register('utilityitem:use:heal', function(itemName)
     if isPainkillerInProgress then return false end
+    if LocalPlayer.state.isDead then return end
 
     local ped = PlayerPedId()
 
