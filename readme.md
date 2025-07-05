@@ -1,7 +1,5 @@
 
-# What Utility Items
-
-Current Version : 1.1.2
+# What Utility Items (1.1.2)
 
 FiveM Utility Items
 - AED 
