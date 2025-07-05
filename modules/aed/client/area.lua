@@ -50,11 +50,11 @@ local function ReviveProcess(itemName)
             disableMouse       = false,
             disableCombat      = false
         },
-    }, function ()
+    }, function()
         lastPlayAnim = GetGameTimer()
         TaskPlayAnim(ped, animLib, animName, 8.0, -8.0, -1, 0, 0, false, false, false)
     end,
-    function ()
+    function()
         if IsControlJustPressed(0, 73) or IsDisabledControlJustPressed(0, 73) then
             TriggerEvent('mythic_progbar:client:cancel')
         end
@@ -65,7 +65,7 @@ local function ReviveProcess(itemName)
 
         ShowPlayerInArea(itemConfig.area)
     end,
-    function (cancelled)
+    function(cancelled)
         onReviveProgress = false
         if not IsPedRunningRagdollTask(ped) then ClearPedTasks(ped) end
 
