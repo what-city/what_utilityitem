@@ -14,7 +14,7 @@ Aed
 
 ```lua
 CONFIG_AED = {
-    ["itemName"]  = {
+    ['itemName']  = {
         duration  = 12000,  -- Milliseconds 
         health    = 150,    -- Add health after revive | 0 - 200
         remove    = false,  -- Remove item after use | true | false
@@ -31,9 +31,21 @@ Painkiller
 
 ```lua
 CONFIG_PAINKILLER = {
-    ["itemName"] = {
+    ['itemName'] = {
         duration = 12000, -- Milliseconds 
         health   = 40,    -- Add Ped health after use
+        remove   = true,  -- Remove item after use | true | false
+    }
+}
+```
+
+Armor
+
+```lua
+CONFIG_ARMOR = {
+    ['itemName'] = {
+        duration = 12000, -- Milliseconds 
+        armor    = 40,    -- Add Ped armor after use
         remove   = true,  -- Remove item after use | true | false
     }
 }
