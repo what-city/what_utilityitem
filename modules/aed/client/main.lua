@@ -12,7 +12,7 @@ local function UseReviveItem(itemName)
     if not targetPlayer then return false end
 
     if IsPedInAnyVehicle(ped, false) then
-        return Notify('ไม่สามารถชุบบนยานพาหนะได้', 3000, 2)
+        return Notify(CONFIG_AED_MESSAGES.PED_IS_IN_ANY_VEHICLE, 3000, 2)
     end
 
     local draggerSource = GetEntityAttachedTo(targetPed)
@@ -24,12 +24,12 @@ local function UseReviveItem(itemName)
     local targetIsDead = CheckPlayerDead(targetServerId)
 
     if not targetIsDead then
-        return Notify('ผู้เล่นยังมีชีวิตอยู่', 5000, 2)
+        return Notify(CONFIG_AED_MESSAGES.TARGET_IS_ALIVE, 5000, 2)
     end
 
     onRevive = true
 
-    Notify('กำลังชุบผู้เล่น', 5000, 1)
+    Notify(CONFIG_AED_MESSAGES.REVIVE_IN_PROGRESS, 5000, 1)
 
     local animLib, animName = 'mini@cpr@char_a@cpr_str', 'cpr_pumpchest'
     lib.requestAnimDict(animLib)
@@ -76,7 +76,7 @@ local function UseReviveItem(itemName)
 
         if not cancelled then
             if not CheckPlayerDead(targetServerId) then
-                return Notify('ผู้เล่นยังมีชีวิตอยู่', 5000, 2)
+                return Notify(CONFIG_AED_MESSAGES.TARGET_IS_ALIVE, 5000, 2)
             end
 
             TriggerServerEvent('utilityitem:revive:player', targetServerId, health)

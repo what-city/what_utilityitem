@@ -74,7 +74,7 @@ local function ReviveProcess(itemName)
             local players = lib.getNearbyPlayers(coords, itemConfig.area, false)
 
             for _, player in ipairs(players) do
-                local targetServerId =  GetPlayerServerId(player.id)
+                local targetServerId = GetPlayerServerId(player.id)
                 local targetIsDead = Player(targetServerId).state.isDead or false
 
                 if targetIsDead then

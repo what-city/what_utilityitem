@@ -28,3 +28,10 @@ CONFIG_AED = {
         }
     }
 }
+
+--- @type table<string, string>
+CONFIG_AED_MESSAGES = {
+    PED_IS_IN_ANY_VEHICLE   = 'ไม่สามารถชุบบนยานพาหนะได้',
+    TARGET_IS_ALIVE         = 'ผู้เล่นยังมีชีวิตอยู่',
+    REVIVE_IN_PROGRESS      = 'กำลังชุบผู้เล่น'
+}
