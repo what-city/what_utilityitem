@@ -7,13 +7,12 @@ local function RespawnPed()
 
     ClearPedBloodDamage(ped)
     ClearPedTasksImmediately(ped)
-    ClearPlayerWantedLevel(PlayerId())
+    ClearPlayerWantedLevel(lib.cache('playerId'))
     FreezeEntityPosition(ped, false)
 
     TriggerEvent('esx:onPlayerSpawn', coords.x, coords.y, coords.z)
     TriggerEvent('playerSpawned', coords.x, coords.y, coords.z)
 end
-
 
 RegisterNetEvent('utilityitem:cl:revive', function(health)
     if not LocalPlayer.state.isDead then return end
@@ -24,7 +23,7 @@ RegisterNetEvent('utilityitem:cl:revive', function(health)
     RespawnPed()
 
     lib.timer(300, function()
-        local ped = PlayerPedId()
+        local ped = lib.cache('ped')
         local coords = GetEntityCoords(ped)
         health = health or 150
         SetEntityHealth(ped, health)
