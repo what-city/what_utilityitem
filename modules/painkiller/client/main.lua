@@ -4,7 +4,7 @@ lib.callback.register('utilityitem:use:heal', function(itemName)
     if isPainkillerInProgress then return false end
     if LocalPlayer.state.isDead then return false end
 
-    local ped = PlayerPedId()
+    local ped = lib.cache('ped')
 
     if IsPedInAnyVehicle(ped, false) then return  false end
 

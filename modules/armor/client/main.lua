@@ -4,7 +4,7 @@ lib.callback.register('utilityitem:use:armor', function(itemName)
     if isArmorInProgress then return false end
     if LocalPlayer.state.isDead then return false end
 
-    local ped = PlayerPedId()
+    local ped = lib.cache('ped')
     if IsPedInAnyVehicle(ped, false) then return false end
 
     ClearPedSecondaryTask(ped)
